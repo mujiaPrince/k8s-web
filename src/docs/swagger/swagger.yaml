@@ -1,0 +1,2017 @@
+basePath: /api/
+definitions:
+  chaincodeInfo.CatHeadLinesRequest:
+    properties:
+      container_id:
+        type: string
+      date:
+        type: string
+      line_num:
+        type: integer
+    type: object
+  chaincodeInfo.CatHeadLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  chaincodeInfo.CatKeywordLinesRequest:
+    properties:
+      container_id:
+        type: string
+      date:
+        type: string
+      keyword:
+        type: string
+      size:
+        type: integer
+    type: object
+  chaincodeInfo.CatKeywordLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  chaincodeInfo.CatNumIntervalLinesRequest:
+    properties:
+      begin_num:
+        type: integer
+      container_id:
+        type: string
+      date:
+        type: string
+      end_num:
+        type: integer
+    type: object
+  chaincodeInfo.CatNumIntervalLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  chaincodeInfo.CatTailLinesRequest:
+    properties:
+      container_id:
+        type: string
+      date:
+        type: string
+      line_num:
+        type: integer
+    type: object
+  chaincodeInfo.CatTailLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  chaincodeInfo.CatTimeIntervalLinesRequest:
+    properties:
+      begin_time:
+        type: string
+      container_id:
+        type: string
+      date:
+        type: string
+      end_time:
+        type: string
+      size:
+        type: integer
+    type: object
+  chaincodeInfo.CatTimeIntervalLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  chaincodeInfo.ContractInfo:
+    properties:
+      contract_desc:
+        type: string
+      contract_id:
+        type: string
+      contract_name:
+        type: string
+      contract_path:
+        type: string
+      contract_status:
+        type: integer
+      contract_upload_flag:
+        type: integer
+      contract_version:
+        type: string
+      network_id:
+        type: integer
+      network_name:
+        type: string
+    type: object
+  channelInfo.ChannelInfo:
+    properties:
+      channel_id:
+        type: integer
+      channel_name:
+        type: string
+      create_time:
+        type: string
+      network_name:
+        type: string
+      node_count:
+        type: integer
+    type: object
+  channelInfo.ChannelInfoSummary:
+    properties:
+      channel_id:
+        type: integer
+      channel_name:
+        type: string
+      create_time:
+        type: string
+      network_id:
+        type: integer
+      network_name:
+        type: string
+      operation_logs:
+        type: string
+    type: object
+  httputil.HTTPError:
+    properties:
+      code:
+        example: 400
+        type: integer
+      message:
+        example: status bad request
+        type: string
+    type: object
+  network.CatHeadLinesRequest:
+    properties:
+      container_name:
+        type: string
+      date:
+        type: string
+      line_num:
+        type: integer
+      namespace_name:
+        type: string
+      pod_name:
+        type: string
+    type: object
+  network.CatHeadLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  network.CatKeywordLinesRequest:
+    properties:
+      container_name:
+        type: string
+      date:
+        type: string
+      keyword:
+        type: string
+      namespace_name:
+        type: string
+      pod_name:
+        type: string
+      size:
+        type: integer
+    type: object
+  network.CatKeywordLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  network.CatNumIntervalLinesRequest:
+    properties:
+      begin_num:
+        type: integer
+      container_name:
+        type: string
+      date:
+        type: string
+      end_num:
+        type: integer
+      namespace_name:
+        type: string
+      pod_name:
+        type: string
+    type: object
+  network.CatNumIntervalLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  network.CatTailLinesRequest:
+    properties:
+      container_name:
+        type: string
+      date:
+        type: string
+      line_num:
+        type: integer
+      namespace_name:
+        type: string
+      pod_name:
+        type: string
+    type: object
+  network.CatTailLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  network.CatTimeIntervalLinesRequest:
+    properties:
+      begin_time:
+        type: string
+      container_name:
+        type: string
+      date:
+        type: string
+      end_time:
+        type: string
+      namespace_name:
+        type: string
+      pod_name:
+        type: string
+      size:
+        type: integer
+    type: object
+  network.CatTimeIntervalLinesResponse:
+    properties:
+      contents:
+        items:
+          type: string
+        type: array
+      message:
+        type: string
+      status:
+        type: integer
+    type: object
+  network.NetInfoT:
+    properties:
+      batchTimeout:
+        type: string
+      consensus:
+        type: integer
+      id:
+        type: integer
+      maxMessageCount:
+        type: string
+      name:
+        type: string
+      netType:
+        type: string
+      netversion:
+        type: string
+      orgs:
+        items:
+          type: integer
+        type: array
+      preferredMaxBytes:
+        type: string
+      stateDb:
+        type: string
+      with_ca:
+        type: boolean
+    type: object
+  structs.BCNodeInfo:
+    properties:
+      nodeID:
+        type: integer
+      nodeName:
+        type: string
+      orgID:
+        type: integer
+      runStatus:
+        type: RunStatusType
+    type: object
+  structs.BlockInfo:
+    properties:
+      blockHight:
+        type: integer
+      blockTime:
+        type: string
+      channelID:
+        type: string
+      currentHash:
+        type: string
+      prevHash:
+        type: string
+      trans:
+        type: string
+      txNum:
+        type: integer
+    type: object
+  structs.ChaincodeFileInfo:
+    properties:
+      chaincodeID:
+        type: string
+      channelID:
+        type: integer
+      desc:
+        type: string
+      netId:
+        type: integer
+      path:
+        type: string
+      status:
+        type: CCInstallType
+      uploadFlag:
+        type: integer
+      version:
+        type: string
+    type: object
+  structs.NetInfo:
+    properties:
+      batchTimeout:
+        type: string
+      consensus:
+        type: integer
+      fabricConfig:
+        items:
+          type: integer
+        type: array
+      id:
+        type: integer
+      maxMessageCount:
+        type: string
+      metedata:
+        items:
+          type: integer
+        type: array
+      name:
+        type: string
+      netType:
+        type: string
+      netversion:
+        type: string
+      preferredMaxBytes:
+        type: string
+      state_db:
+        type: string
+      status:
+        type: integer
+      with_ca:
+        type: boolean
+    type: object
+  structs.NetTopology:
+    properties:
+      kafka:
+        items:
+          type: CommonTopology
+        type: array
+      orderer:
+        items:
+          type: CommonTopology
+        type: array
+      peer:
+        type: object
+      zookeeper:
+        items:
+          type: CommonTopology
+        type: array
+    type: object
+  structs.OrgListResp:
+    properties:
+      ID:
+        type: integer
+      createTime:
+        type: string
+      name:
+        type: string
+      netName:
+        type: string
+      nodeNum:
+        type: integer
+      orgType:
+        type: integer
+    type: object
+  structs.Organization:
+    properties:
+      ID:
+        type: integer
+      createTime:
+        type: string
+      name:
+        type: string
+      nodeNum:
+        type: integer
+      orgType:
+        type: OrgType
+    type: object
+  structs.TransactionInfo:
+    properties:
+      blockHight:
+        type: integer
+      channelID:
+        type: string
+      status:
+        type: integer
+      transactionID:
+        type: string
+      transactionTime:
+        type: string
+      transactionType:
+        type: integer
+    type: object
+host: 10.0.90.154:31826
+info:
+  contact: {}
+  description: 提供一站式配置、开发、测试、部署和运维的区块链服务平台.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Swagger for yhbaas
+  version: "1.0"
+paths:
+  /allChannels/:
+    get:
+      consumes:
+      - application/json
+      description: 取出所有通道列表，每条记录包括网络信息
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/channelInfo.ChannelInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 取出所有通道列表，每条记录包括网络信息
+      tags:
+      - GetChannelList
+  /allChannels/{netId}:
+    get:
+      consumes:
+      - application/json
+      description: 根据网络Id取出所有其所属通道列表
+      parameters:
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/channelInfo.ChannelInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 根据网络Id取出所有其所属通道列表
+      tags:
+      - GetAllChannelsByNetId
+  /block/blockNumber/{channelID}/{num}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道中指定区块高度的区块信息
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: integer
+      - description: num
+        in: path
+        name: num
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BlockInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道中指定区块高度的区块信息
+      tags:
+      - GetBlockByNumber
+  /block/chainInfo/{channelID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道最新区块信息
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道最新区块信息
+      tags:
+      - GetChainInfo
+  /block/recentBlock/{channelID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道中最近区块
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BlockInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道中最近区块
+      tags:
+      - GetRecentBlock
+  /block/sumTxNum/{channelID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道中已经执行的交易次数
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: number
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道中已经执行的交易次数
+      tags:
+      - GetSumTxNum
+  /chaincode/add:
+    post:
+      consumes:
+      - application/json
+      description: 新建智能合约
+      parameters:
+      - description: 只需要填写chaincodeID、desc、netId、version
+        in: body
+        name: ChaincodeInfo
+        required: true
+        schema:
+          $ref: '#/definitions/structs.ChaincodeFileInfo'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 新建智能合约
+      tags:
+      - AddChaincodes
+  /channel/{channelID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取已经加入通道的节点信息
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取已经加入通道的节点信息
+      tags:
+      - GetChannelPeerInfos
+  /channel/{channelID}/info:
+    get:
+      consumes:
+      - application/json
+      description: 获取通道的详情信息
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/channelInfo.ChannelInfoSummary'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取通道的详情信息
+      tags:
+      - GetChannelInfo
+  /channel/create:
+    post:
+      consumes:
+      - application/json
+      description: 新建通道
+      parameters:
+      - description: 前端传参
+        in: body
+        name: NewChannel
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 新建通道
+      tags:
+      - CreateChannel
+  /channel/join:
+    post:
+      consumes:
+      - application/json
+      description: 节点加入通道
+      parameters:
+      - description: 前端传参
+        in: body
+        name: PeersToJoin
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 节点加入通道
+      tags:
+      - JoinChannel
+  /channelInfo/{channelId}:
+    get:
+      consumes:
+      - application/json
+      description: 根据通道ID获取通道详情中的组织和已加入的节点信息
+      parameters:
+      - description: channelId
+        in: path
+        name: channelId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 根据通道ID获取通道详情中的组织和已加入的节点信息
+      tags:
+      - GetChannelInfoById
+  /contract/chain-code/logging/head/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定链码容器的开头N行日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatHeadLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/chaincodeInfo.CatHeadLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.CatHeadLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定链码容器的开头N行日志
+      tags:
+      - LoggingForChainCodeContainer
+  /contract/chain-code/logging/keyword/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定链码容器的包含指定关键字的日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatKeywordLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/chaincodeInfo.CatKeywordLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.CatKeywordLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定链码容器的包含指定关键字的日志
+      tags:
+      - LoggingForChainCodeContainer
+  /contract/chain-code/logging/num-interval/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定链码容器的指定行区间的日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatNumIntervalLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/chaincodeInfo.CatNumIntervalLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.CatNumIntervalLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定链码容器的指定行区间的日志
+      tags:
+      - LoggingForChainCodeContainer
+  /contract/chain-code/logging/tail/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定链码容器的结尾N行日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatTailLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/chaincodeInfo.CatTailLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.CatTailLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定链码容器的结尾N行日志
+      tags:
+      - LoggingForChainCodeContainer
+  /contract/chain-code/logging/time-interval/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定链码容器的指定时间区间的日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatTimeIntervalLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/chaincodeInfo.CatTimeIntervalLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.CatTimeIntervalLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定链码容器的指定时间区间的日志
+      tags:
+      - LoggingForChainCodeContainer
+  /contract/delete:
+    post:
+      consumes:
+      - application/json
+      description: DeleteContract
+      parameters:
+      - description: ChaincodeID
+        in: formData
+        name: ChaincodeID
+        required: true
+        type: string
+      - description: Desc
+        in: formData
+        name: Desc
+        required: true
+        type: string
+      - description: Path
+        in: formData
+        name: Path
+        required: true
+        type: string
+      - description: Version
+        in: formData
+        name: Version
+        required: true
+        type: string
+      - description: NetID
+        in: formData
+        name: NetID
+        required: true
+        type: integer
+      - description: UploadFlag
+        in: formData
+        name: UploadFlag
+        required: true
+        type: integer
+      - description: Status
+        in: formData
+        name: Status
+        required: true
+        type: string
+      - description: ChannelID
+        in: formData
+        name: ChannelID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 删除合约
+      tags:
+      - DeleteContract
+  /contract/getAll/:
+    get:
+      consumes:
+      - application/json
+      description: 获取全部合约信息，包括所属网络
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.ContractInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取全部合约信息，包括所属网络
+      tags:
+      - GetAllContractList
+  /contract/getAll/{net}:
+    get:
+      consumes:
+      - application/json
+      description: 根据网络ID获取合约信息
+      parameters:
+      - description: net
+        in: path
+        name: net
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/chaincodeInfo.ContractInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 根据网络ID获取合约信息
+      tags:
+      - GetAllContracts
+  /contract/info/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 通过合约Id查询合约详情
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.ChaincodeFileInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 通过合约Id查询合约详情
+      tags:
+      - GetContractById
+  /contract/install:
+    post:
+      consumes:
+      - application/json
+      description: 安装智能合约
+      parameters:
+      - description: 前端传参
+        in: body
+        name: ContractInstallInfo
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 安装智能合约
+      tags:
+      - InstallContract
+  /contract/instantiatex:
+    post:
+      consumes:
+      - application/json
+      description: 部署智能合约
+      parameters:
+      - description: 前端传参
+        in: body
+        name: ContractDeploy
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 部署智能合约
+      tags:
+      - InstantiateContract
+  /contract/invoke:
+    post:
+      consumes:
+      - application/json
+      description: 调用智能合约
+      parameters:
+      - description: 调用请求
+        in: body
+        name: InvokeRequest
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 调用智能合约
+      tags:
+      - InvokeContract
+  /contract/num/{channelId}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道中已经部署的合约个数
+      parameters:
+      - description: channelId
+        in: path
+        name: channelId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: number
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道中已经部署的合约个数
+      tags:
+      - GetContractNumInited
+  /contract/query:
+    post:
+      consumes:
+      - application/json
+      description: 查询智能合约
+      parameters:
+      - description: 查询请求
+        in: body
+        name: QueryRequest
+        required: true
+        schema:
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 查询智能合约
+      tags:
+      - QueryContract
+  /contract/upgrade/:
+    post:
+      consumes:
+      - application/json
+      description: 升级智能合约
+      parameters:
+      - description: 只需要填写chaincodeID、version
+        in: body
+        name: UpgradeContraceRequest
+        required: true
+        schema:
+          $ref: '#/definitions/structs.ChaincodeFileInfo'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 升级智能合约
+      tags:
+      - UpgradeChainCodeFileInfo
+  /network/component/logging/head/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定网络组件的开头N行日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatHeadLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/network.CatHeadLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/network.CatHeadLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络组件的开头N行日志
+      tags:
+      - LoggingForNetworkComponent
+  /network/component/logging/keyword/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定网络组件的包含指定关键字的日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatKeywordLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/network.CatKeywordLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/network.CatKeywordLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络组件的包含指定关键字的日志
+      tags:
+      - LoggingForNetworkComponent
+  /network/component/logging/num-interval/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定网络组件的指定行区间的日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatNumIntervalLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/network.CatNumIntervalLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/network.CatNumIntervalLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络组件的指定行区间的日志
+      tags:
+      - LoggingForNetworkComponent
+  /network/component/logging/tail/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定网络组件的结尾N行日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatTailLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/network.CatTailLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/network.CatTailLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络组件的结尾N行日志
+      tags:
+      - LoggingForNetworkComponent
+  /network/component/logging/time-interval/:
+    post:
+      consumes:
+      - application/json
+      description: 获取指定网络组件的指定时间区间的日志
+      parameters:
+      - description: 请求参数
+        in: body
+        name: CatTimeIntervalLinesRequest
+        required: true
+        schema:
+          $ref: '#/definitions/network.CatTimeIntervalLinesRequest'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/network.CatTimeIntervalLinesResponse'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络组件的指定时间区间的日志
+      tags:
+      - LoggingForNetworkComponent
+  /network/freeOrgs/:
+    get:
+      consumes:
+      - application/json
+      description: 查询没有和网络关联的组织
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.Organization'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 查询没有和网络关联的组织
+      tags:
+      - ListFreeOrgs
+  /network/info/:
+    get:
+      consumes:
+      - application/json
+      description: 查询网络列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.NetInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 查询网络列表
+      tags:
+      - ListNetInfo
+    post:
+      consumes:
+      - application/json
+      description: 新建网络
+      parameters:
+      - description: 前端传参数
+        in: body
+        name: NetInfo
+        required: true
+        schema:
+          $ref: '#/definitions/network.NetInfoT'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 新建网络
+      tags:
+      - CreateNetInfo
+  /network/info/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: 删除网络，网络组织关系表，删除k8s对应数据
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.Organization'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 删除网络
+      tags:
+      - DeleteNetInfo
+    get:
+      consumes:
+      - application/json
+      description: 根据网络id查询网络信息
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.NetInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 根据网络id查询网络信息
+      tags:
+      - GetNetInfo
+  /network/netorg/{netId}:
+    get:
+      consumes:
+      - application/json
+      description: 通过网络Id查询所属的peer节点列表
+      parameters:
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 通过网络Id查询所属的peer节点列表
+      tags:
+      - GetNetPeersByNetId
+  /network/org/:
+    get:
+      consumes:
+      - application/json
+      description: 查询所有组织列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.OrgListResp'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 查询所有组织列表
+      tags:
+      - GetOrgList
+    post:
+      consumes:
+      - application/json
+      description: 新建组织
+      parameters:
+      - description: 前端请求只需要填写name、orgType、nodeNum，其中orgType只能填写1或者2，注意是integer类型
+        in: body
+        name: Organization
+        required: true
+        schema:
+          $ref: '#/definitions/structs.Organization'
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 新建组织
+      tags:
+      - CreateOrg
+  /network/org/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: 删除组织
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 删除组织
+      tags:
+      - DeleteOrg
+  /network/org/{netId}:
+    get:
+      consumes:
+      - application/json
+      description: 查询指定网络组织列表
+      parameters:
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.OrgListResp'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 查询指定网络的组织列表
+      tags:
+      - ListOrgByNetId
+  /network/orgsCanJoin/{channelId}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道中等待更新配置以加入通道的组织列表
+      parameters:
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.Organization'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道中等待更新配置以加入通道的组织列表
+      tags:
+      - GetOrgsCanJoin
+  /network/peerorg/{netId}:
+    get:
+      consumes:
+      - application/json
+      description: 通过网络Id获取peer类型的组织
+      parameters:
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.Organization'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 通过网络Id获取peer类型的组织
+      tags:
+      - GetOrgByNetInfoId
+  /network/peersCanInit/{channelId}/{chaincodeID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定网络下指定可以部署指定合约的peer列表
+      parameters:
+      - description: chaincodeID
+        in: path
+        name: chaincodeID
+        required: true
+        type: string
+      - description: channelId
+        in: path
+        name: channelId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络下指定可以部署指定合约的peer列表
+      tags:
+      - GetPeersCanInit
+  /network/peersCanInstall/{netId}/{chaincodeID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定网络下指定可以安装指定合约的peer列表
+      parameters:
+      - description: chaincodeID
+        in: path
+        name: chaincodeID
+        required: true
+        type: string
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络下指定可以安装指定合约的peer列表
+      tags:
+      - GetPeersCanInstall
+  /network/peersCanInvoke/{chaincodeID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取可以查询和调用指定合约的peer列表
+      parameters:
+      - description: chaincodeID
+        in: path
+        name: chaincodeID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取可以查询和调用指定合约的peer列表
+      tags:
+      - GetPeersCanInvoke
+  /network/peersCanJoin/{channelId}:
+    get:
+      consumes:
+      - application/json
+      description: 获取可以加入通道的节点信息
+      parameters:
+      - description: channelId
+        in: path
+        name: channelId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取可以加入通道的节点信息
+      tags:
+      - GetPeersCanJoin
+  /network/topology/{netId}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定网络的拓扑结构
+      parameters:
+      - description: netId
+        in: path
+        name: netId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.NetTopology'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定网络的拓扑结构
+      tags:
+      - GetNetTopology
+  /node/{orgId}:
+    get:
+      consumes:
+      - application/json
+      description: 通过组织Id查询所属的节点列表
+      parameters:
+      - description: orgId
+        in: path
+        name: orgId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.BCNodeInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 通过组织Id查询所属的节点列表
+      tags:
+      - ListNodeInfosByOrgId
+  /organization/info/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 单条查询组织
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.Organization'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 单条查询组织
+      tags:
+      - GetOrgById
+  /transasction/recentTxList/{channelID}:
+    get:
+      consumes:
+      - application/json
+      description: 获取指定通道中最近交易
+      parameters:
+      - description: channelID
+        in: path
+        name: channelID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/structs.TransactionInfo'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+            type: object
+      security:
+      - Bearer: []
+      summary: 获取指定通道中最近交易
+      tags:
+      - GetRecentTxList
+swagger: "2.0"
