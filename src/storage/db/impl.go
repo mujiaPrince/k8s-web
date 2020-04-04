@@ -24,7 +24,6 @@ func NewDbBackend(dbConf *config.DatabaseConfig) (*DbBackend, error) {
 		dbConf.Address,
 		dbConf.DBname,
 	)
-	// connUrl = "root:zaq1xsw@@tcp(10.0.90.153:33002)/yhbaas?charset=utf8&parseTime=true&loc=Local"
 	db, err := gorm.Open(dbConf.Driver, connUrl)
 	//	db.LogMode(true)
 
